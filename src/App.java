@@ -1,7 +1,7 @@
+import controllers.MainController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import views.MainPanel;
 
 public class App extends Application {
     public static void main(String[] args) throws Exception {
@@ -11,9 +11,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        MainPanel mainPanel = new MainPanel();
+        MainController mainController  = new MainController();
 
-        Scene scene = new Scene(mainPanel, 400, 300);
+        Scene scene = new Scene(mainController.getMainPanel(), 400, 300);
 
         stage.setScene(scene);
         stage.show();
